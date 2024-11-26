@@ -6,6 +6,4 @@
 </template>
 
 <script setup>
-import productos from '../assets/productos.json'
-import { RouterLink } from 'vue-router';
 </script>

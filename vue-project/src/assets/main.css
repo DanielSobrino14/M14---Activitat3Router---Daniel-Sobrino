@@ -1,35 +1,82 @@
-@import './base.css';
-
+/* Estilos generales para el contenedor principal */
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  font-weight: normal;
+  font-family: 'Roboto', sans-serif; /* Usar una fuente moderna */
 }
 
-a,
-.green {
+/* Estilo para la barra de navegación */
+header nav {
+  background-color: #1e2a38; /* Fondo oscuro para la barra de navegación */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 2rem; /* Espacio debajo de la barra */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+header nav a {
+  color: #fff; /* Color de texto blanco */
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  margin: 0 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/* Efecto hover sobre los enlaces */
+header nav a:hover {
+  background-color: #3498db; /* Color de fondo azul al pasar el ratón */
+  color: #fff;
+  transform: translateY(-3px); /* Levanta ligeramente el enlace */
+}
+
+/* Enlace activo */
+header nav a.router-link-exact-active {
+  background-color: #3498db; 
+  color: white;
+  font-weight: 600;
+}
+
+body {
+  background-color: #f4f6f9; 
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header nav a {
+    margin: 8px 0;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+main {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
 }

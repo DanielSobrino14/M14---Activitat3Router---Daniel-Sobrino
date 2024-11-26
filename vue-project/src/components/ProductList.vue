@@ -6,7 +6,7 @@ import {RouterLink,RouterView} from 'vue-router';
 <template>
     <ul>
         <li v-for="product in productos" :key="product.id">
-            <RouterLink :to="'/productDetails/' + product.id + '/' + product.name + '/' + product.description">{{ product.name }}</RouterLink>
+            <RouterLink :to="'/productDetail/' + product.id + '/' + product.name + '/' + product.description">{{ product.name }}</RouterLink>
         </li>
     </ul>
 </template>    
